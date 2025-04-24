@@ -1,0 +1,15 @@
+#Modifying string variables
+#You did so well working with LLM Camp's reviews that they've asked for your help again.
+
+#They have a variable called most_popular_course, which contains the name of their highest-ranked course. It has been provided in script.py so you can see its contents. However, there are issues with it:
+
+#There's a typo. It should be "Introduction" rather than "Intro".
+#They want to remove spaces and use underscores to make it easier to analyze.
+#For consistency, they want all characters to be lowercase.
+#They'd like your support in making these changes!
+
+
+
+#Update the variable so that "Intro" now reads "Introduction".
+
+most_popular_course = most_popular_course.replace("Intro", "Introduction")
