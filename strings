@@ -74,4 +74,214 @@ print(most_popular_course)
 introduction_to_embeddings_with_the_openai_api
 
 
+#Building a party playlist
+#You're planning a party and want to build a playlist containing songs and the order in which they should be played.
 
+#You decide this is a great opportunity to build a list in Python! In this exercise, you will create your playlist variable and add the first three songs.
+
+# Create the playlist variable
+playlist = [1,"Blinding Lights", 2,"One Dance", 3,"Uptown Funk"]
+
+# Print the list
+print(playlist)
+[1, 'Blinding Lights', 2, 'One Dance', 3, 'Uptown Funk']
+
+<script.py> output:
+    [1, 'Blinding Lights', 2, 'One Dance', 3, 'Uptown Funk']
+
+
+#Subsetting lists
+#You've expanded your playlist. It still contains the song order and song names, but now you've also added the artist name for each song, as well as some additional songs!
+
+#It repeats the same order throughout the list - 1) song number, 2) song name, 3) artist name, repeat.
+
+#The new playlist has been printed in the IPython Shell for your reference.
+
+#This is a great opportunity for you to practice extracting specific information from your list.
+
+#Subsetting lists
+#You've expanded your playlist. It still contains the song order and song names, but now you've also added the artist name for each song, as well as some additional songs!
+
+#It repeats the same order throughout the list - 1) song number, 2) song name, 3) artist name, repeat.
+
+#The new playlist has been printed in the IPython Shell for your reference.
+
+#This is a great opportunity for you to practice extracting specific information from your list.
+
+#Instructions 1/3
+#35 XP
+#Find the name of the second song, which is the fifth element, in the playlist, and print the value.
+
+[1, 'Blinding Lights', 'The Weeknd', 2, 'One Dance', 'Drake', 3, 'Uptown Funk', 'Mark Ronson', 4, 'Closer', 'The Chainsmokers', 5, 'One Kiss', 'Calvin Harris', 6, 'Mr. Brightside', 'The Killers']
+# Find the second song
+print(playlist[4])
+One Dance
+
+#Get the last song's artist
+In [1]:
+print(playlist[-1])
+The Killers
+
+
+Print every song name in the playlist.
+# Print all songs in the playlist
+print(playlist[1::3])
+['Blinding Lights', 'One Dance', 'Uptown Funk', 'Closer', 'One Kiss', 'Mr. Brightside']
+
+
+Building a playlist dictionary
+With your new-found knowledge of dictionaries, you decide to translate your playlist from a list into a dictionary! As a reminder, this is the contents of playlist:
+
+[1, "Blinding Lights", "The Weeknd", 2, "One Dance", "Drake", 
+ 3, "Uptown Funk", "Mark Ronson", 4, "Closer", "The Chainsmokers",
+ 5, "One Kiss", "Calvin Harris", 6, "Mr. Brightside", "The Killers"]
+The song names start at the second index "Blinding Lights" and make up every third value afterward.
+
+Artist names start at the third index "The Weeknd" and also make up every third value afterward.
+
+Create a dictionary called playlist containing the first two songs, in that order, with artist names as keys and their respective songs as values.
+Print the dictionary.
+
+# Create the playlist dictionary
+playlist = {"The Weeknd":"Blinding Lights", "Drake":"One Dance"}
+
+# Print the playlist
+print(playlist)
+{'The Weeknd': 'Blinding Lights', 'Drake': 'One Dance'}
+
+Working with dictionaries
+You've been busy, adding more artists and songs to your playlist dictionary in preparation for the party!
+
+As a reminder, it contains artist names as keys and song names as values.
+
+In this exercise, you'll access parts of the dictionary as well as adding a new artist and song.
+
+Print the name of the song in the playlist that is by the artist "Coldplay".
+Add a new key-value pair to the playlist, where the key is "Usher" and the value is "Yeah!".
+Print only the songs in the playlist.
+
+Print the name of the song in the playlist that is by the artist "Coldplay".
+Add a new key-value pair to the playlist, where the key is "Usher" and the value is "Yeah!".
+Print only the songs in the playlist.
+Print the name of the song in the playlist that is by the artist "Coldplay".
+Add a new key-value pair to the playlist, where the key is "Usher" and the value is "Yeah!".
+
+print(playlist[Coldplay])
+print(playlist.values())
+
+
+    (325780, 1041, 4275199)
+# Create a tuple
+q3_financials= (325780, 1041, 4271599)
+
+# Print the tuple
+print(q3_financials)
+(325780, 1041, 4271599)
+
+<script.py> output:
+    (325780, 1041, 4271599)
+
+
+DJ Sets
+To practice working with data structures, you decide to split up the music artists in your playlist by genre, allowing you to create sets for each genre.
+
+In this exercise, you'll create a set to hold indie artists as well as convert a list of hip-hop artists into a set.
+
+hip_hop = ["Drake", "JAY-Z", "50 Cent", "Drake"]
+
+# Create a set
+indie_set = {"King of Leon", "Arctic Monkeys", "Stereophonics"}
+
+hip_hop = ["Drake", "JAY-Z", "50 Cent", "Nas"]
+
+# Create a set
+indie_set = {"Kings of Leon", "MGMT", "Stereophonics"}
+
+# Convert hip_hop to a set
+hip_hop_set = set(hip_hop)
+
+# Convert hip_hop to a set
+hip_hop_set = set(hip_hop)
+
+# Print the indie and hip_hop sets
+print(indie_set, hip_hop_set)
+{'Kings of Leon', 'MGMT', 'Stereophonics'} {'JAY-Z', 'Drake', '50 Cent'}
+
+<script.py> output:
+    {'Kings of Leon', 'MGMT', 'Stereophonics'} {'JAY-Z', 'Drake', '50 Cent'}
+
+Checking inflation
+You've been asked to support the UK Government in analyzing their inflation statistics.
+
+They've supplied you with data for September and August 2023 stored as two float variables, inflation_september and inflation_august respectively.
+
+You'll need to build a workflow that compares these statistics.
+Checking inflation
+You've been asked to support the UK Government in analyzing their inflation statistics.
+
+They've supplied you with data for September and August 2023 stored as two float variables, inflation_september and inflation_august respectively.
+
+You'll need to build a workflow that compares these statistics.
+
+# Check if September inflation is less than August inflation
+if inflation_september < inflation_august:
+    print("Inflation decreased")
+
+
+# Check if September inflation is more than August inflation
+elif inflation_september > inflation_august:
+  print("Inflation increased")
+  
+# Confirm that they are equal
+else:
+   print("Inflation remained stable")
+Inflation remained stable
+
+<script.py> output:
+    Inflation remained stable
+
+# Check the number of beds
+if num_beds < min_num_beds:
+  print("Insufficient bedrooms")
+
+# Check square feet
+elif sq_foot <= min_sq_foot:
+  print ("To small")
+
+  
+# Check the rent
+elif rent > max_rent:
+  print("Too expensive")
+
+  
+# If all conditions met
+else:
+  print("This looks promising")
+This looks promising
+
+<script.py> output:
+    This looks promising
+
+<script.py> output:
+    This looks promising
+# Check the number of beds
+if num_beds < min_num_beds:
+  print("Insufficient bedrooms")
+
+# Check square feet
+elif sq_foot <= min_sq_foot:
+  print ("Too small")
+
+  
+# Check the rent
+elif rent > max_rent:
+  print("Too expensive")
+
+  
+# If all conditions met
+else:
+  print("This looks promising!")
+This looks promising!
+
+<script.py> output:
+    This looks promising!
