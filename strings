@@ -285,3 +285,407 @@ This looks promising!
 
 <script.py> output:
     This looks promising!
+
+Looping through a list
+Time to test your for-loop skills! In the script.py a list called user_ids has been stored, containing, you guessed it - user IDs!
+
+Your task is to loop through the list and print each ID individually.
+
+user_ids = ["T42YG4KTK", "VTQ39IDQ0", "CRL11YUWX", 
+            "K6Y5URXLR", "V4XCBER7V", "IOGQWC61K"]
+
+# Loop through user_ids
+for user_id in user_ids:
+  # Print the user_id
+  print(user_id)
+T42YG4KTK
+VTQ39IDQ0
+CRL11YUWX
+K6Y5URXLR
+V4XCBER7V
+IOGQWC61K
+
+Updating a variable with for loops
+You're planning to hold a party so you can show off your playlist to friends and family. You've hired a venue that has a maximum capacity of 30 people, and you'd like to keep track of tickets sold.
+
+This is a perfect opportunity to use a for loop - it will increment the value of a variable each time a ticket is sold and then print a statement once the event is sold out.
+
+
+Create a variable called tickets_sold with a value of 0.
+Create a variable called max_capacity with a value of 30.
+Loop through a range starting at 1 and finishing at max_capacity plus one, naming the iterator as tickets.
+Inside the for loop, add 1 to the value of tickets_sold.
+# Create the tickets_sold variable
+tickets_sold = 0
+
+# Create the max_capacity variable
+max_capacity = 30
+
+# Loop through a range up to and including max_capacity's value
+for tickets in range(1, max_capacity+ 1):
+  
+  # Add one to tickets_sold in each iteration
+  tickets_sold += 1
+  
+print("Sold out:", tickets_sold, "tickets sold!")
+Sold out: 30 tickets sold!
+
+<script.py> output:
+    Sold out: 30 tickets sold!
+
+
+Conditional looping with a dictionary
+Your friend at LLM Camp has provided you with a dictionary called courses. It contains the names of courses as keys and their associated topic as a value. There are three topics: "AI", "Programming", and "Data Engineering".
+
+courses = {"LLM Concepts": "AI", 
+           "Introduction to Data Pipelines": "Data Engineering", 
+           "AI Ethics": "AI",
+           "Introduction to dbt": "Data Engineering", 
+           "Writing Efficient Python Code": "Programming",
+           "Introduction to Docker": "Programming"}
+This is a great chance to practice looping through dictionaries!
+
+
+Create a for loop to iterate over key, value in courses.items().
+Check if the value is "AI", and print the key if so.
+Else, check if the value is "Programming", printing the key if so.
+Otherwise, print the key to confirm it is a "Data Engineering" course.
+
+
+# Check if the value is "AI"
+if value == "AI":
+    print(key, "is an AI course")
+
+# Check if the value is "Programming"
+elif value == "Programming":  # Use elif here
+    print(key, "is a Programming course")
+
+# Otherwise, print that it is a "Data Engineering" course
+else:
+    print(key, "is a Data Engineering course")
+
+
+Converting to a while loop
+You can often achieve the same tasks using either a for or while loop.
+
+To demonstrate this, you'll convert this for loop into a while!
+
+# Create the tickets_sold variable
+tickets_sold = 0
+
+# Create the max_capacity variable
+max_capacity = 10
+
+# Loop through a range up to and including max_capacity's value
+for tickets in range(1, max_capacity + 1):
+
+  # Add one to tickets_sold in each iteration
+  tickets_sold += 1
+
+print("Sold out:", tickets_sold, "tickets sold!")
+Note that if your while loop takes too long to run, or your session is expiring, you might have created an infinite loop. In particular, remember to indent the contents of the loop using four spaces or auto-indentation, and make sure the conditions are such that the loop has a stopping point.
+
+
+Create a while loop to run while tickets_sold is less than max_capacity.
+Inside the loop, increment tickets_sold by 1, representing an increase for each ticket sold.
+Outside of the loop, print tickets_sold.
+
+tickets_sold = 0
+max_capacity = 10
+
+# Create a while loop
+while tickets_sold < max_capacity:
+  
+  # Add one to tickets_sold in each iteration
+  tickets_sold += 1
+
+# Print the number of tickets sold
+print("Sold out:", tickets_sold, "tickets sold!")
+Sold out: 10 tickets sold!
+
+<script.py> output:
+    Sold out: 10 tickets sold!
+
+Conditional while loops
+You've offered to help build a program that LLM Camp can use to promote an upcoming new course launching on the 26th of the month.
+
+Today's date is the 22nd, and they have a pre-release version available from the 24th for all users who purchase a subscription on or before the 24th!
+
+You'll need to build a custom workflow that provides tailored messages depending on the date.
+
+Note that if your while loop takes too long to run, or your session is expiring, you might have created an infinite loop. In particular, remember to indent the contents of the loop using four spaces or auto-indentation, and make sure the conditions are such that the loop has a stopping point.
+
+Create a while loop based on current_date being less than or equal to release_date.
+Check if current_date is less than or equal to 24 and, if so, print "Purchase before the 25th for early access"
+Otherwise, check if current_date is equal to 25, printing "Coming soon!".
+After all checks, increment current_date by one for each day that passes.
+
+release_date = 26
+current_date = 22
+
+# Create a conditional loop while current_date is less than or equal to the release_date
+while current_date <= release_date:
+  
+  # Promote purchases
+  if current_date <= 24:
+    print("Purchase before the 25th for early access")
+  
+  # Check if the date is equal to the 25th
+  elif current_date == 25:
+    print("Coming soon!")
+  else:
+    print("Available now!")
+  
+  # Increment current_date by one
+  current_date+= 1
+Purchase before the 25th for early access
+Purchase before the 25th for early access
+Purchase before the 25th for early access
+Coming soon!
+Available now!
+
+<script.py> output:
+    Purchase before the 25th for early access
+    Purchase before the 25th for early access
+    Purchase before the 25th for early access
+    Coming soon!
+    Available now!
+
+Appending to a list
+You've been provided with a dictionary called authors, which has information about 20 of the most popular fiction authors in the World. It contains the names of authors as keys and the number of books they've created as values.
+
+You're interested in finding out how many of these authors have made less than 25 books. To do this, you will create a list called authors_below_twenty_five, filling it with author names conditionally based on whether they have created less than 25 books.
+
+
+Create an empty list called authors_below_twenty_five.
+Loop through the key and value iterators in the authors dictionary.
+Inside the for loop, check if value iterator is less than 25.
+If so, append the author's name to the authors_below_twenty_five list.
+
+# Create an empty list
+authors_below_twenty_five = []
+
+# Loop through the authors dictionary
+for key, value in authors.items():
+  
+  # Check for values less than 25
+  if value < 25:
+    
+    # Append the author to the list
+    authors_below_twenty_five.append(key)
+    
+print(authors_below_twenty_five)
+['Nicholas Sparks', 'Judith Krantz', 'Harold Robbins', 'J. K. Rowling', 'Sidney Sheldon']
+
+
+Book genre popularity
+Previously, you worked with a dictionary containing information about authors and the number of books that they have written.
+
+In this exercise, data about the same authors has been aggregated to create a new dictionary called genre_sales, where the keys are the genre and the values are the average sales for that genre among the 20 most popular authors.
+
+Your job is to find the most and least popular genres among these authors, along with their average sales revenue.
+
+
+Check if average_sale is equal to the largest sales revenue (5166000000) in genre_sales.
+Print the genre with the largest average sales.
+Next, check whether average_sale is equal to the smallest sales revenue (80000000).
+Lastly, print the genre with the smallest average sales.
+
+for genre, average_sale in genre_sales.items():
+    
+    # Filter for the maximum sales value
+    if average_sale == 5166000000:
+      
+      # Print the genre
+      print("Most popular genre: ", genre)
+      print("Average sales: ", average_sale)
+    
+    # Filter for the minimum sales value
+    elif average_sale == 80000000:
+      
+      # Print the genre
+      print("Least popular genre: ", genre)
+      print("Average sales: ", average_sale)
+Least popular genre:  Literature
+Average sales:  80000000
+Most popular genre:  Manga
+Average sales:  5166000000
+
+Working with keywords
+Working with the genre_sales dictionary again, this time you will apply multiple conditions simultaneously to find out information about book genres and average sales!
+
+Instructions 1/2
+
+1
+2
+Loop through the keys and values of the genre_sales dictionary.
+Inside the loop, check if the genre is "Horror" or "Mystery".
+
+# Loop through the dictionary
+for genre, sale in genre_sales.items():
+  
+  # Check if genre is Horror or Mystery
+  if genre == "Horror" or genre == "Mystery":
+    print(genre, sale)
+Horror 312500000
+
+
+Instructions 2/2
+50 XP
+Check if genre is "Thriller" and average sales is more than or equal to 3000000.
+
+# Loop through the dictionary
+for genre, sale in genre_sales.items():
+  
+  # Check if genre is Horror or Mystery
+  if genre == "Horror" or genre == "Mystery":
+    print(genre, sale)
+  
+  # Check if genre is Thriller and sale is at least 3 million
+  elif genre == "Thriller" and sale >= 3000000:
+    print(genre, sale)
+Horror 312500000
+Mystery 300000000
+Thriller 320000000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mystery 300000000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
