@@ -547,36 +547,6 @@ for genre, sale in genre_sales.items():
 Horror 312500000
 Mystery 300000000
 Thriller 320000000
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Mystery 300000000
 
 
